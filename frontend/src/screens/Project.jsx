@@ -5,10 +5,27 @@ import axios from '../config/axios';
 import { initializeSocket, receiveMessage, sendMessage } from '../config/socket';
 import Markdown from 'markdown-to-jsx';
 import hljs from 'highlight.js';
-import { getWebContainer } from '../../config/webContainer';
+console.log('Importing webContainer from:', '../config/webcontainer');
+import { getWebContainer } from '../config/webcontainer';  // With a capital "C"
+
+
 
 import PropTypes from 'prop-types';
 //import webcontainer from "../config/webcontainer";
+import('../config/webcontainer')
+  .then(module => {
+    console.log('Successfully imported webcontainer:', module);
+    const { getWebContainer } = module;
+
+    // Now you can use getWebContainer() here
+    getWebContainer().then(container => {
+      console.log('Web container instance:', container);
+    });
+  })
+  .catch(err => {
+    console.error('Failed to import webcontainer:', err);
+  });
+
 
 
 function SyntaxHighlightedCode({ className, children }) {
