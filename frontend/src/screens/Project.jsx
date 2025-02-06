@@ -5,8 +5,10 @@ import axios from '../config/axios';
 import { initializeSocket, receiveMessage, sendMessage } from '../config/socket';
 import Markdown from 'markdown-to-jsx';
 import hljs from 'highlight.js';
-import { getWebContainer } from '../config/webcontainer';
+import { getWebContainer } from '../src/config/webContainer';
 import PropTypes from 'prop-types';
+//import webcontainer from "../config/webcontainer";
+
 
 function SyntaxHighlightedCode({ className, children }) {
     const ref = useRef(null);
