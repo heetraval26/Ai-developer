@@ -5,7 +5,7 @@ import axios from '../config/axios';
 import { initializeSocket, receiveMessage, sendMessage } from '../config/socket';
 import Markdown from 'markdown-to-jsx';
 import hljs from 'highlight.js';
-import { getWebContainer } from '../src/config/webContainer';
+import { getWebContainer } from '../config/webcontainer';
 import PropTypes from 'prop-types';
 //import webcontainer from "../config/webcontainer";
 
