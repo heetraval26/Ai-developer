@@ -12,17 +12,23 @@
     content="width=device-width, initial-scale=1.0"
   />
   <title>Vite + React</title>
+  <!-- Host the CSS locally or keep the CDN link -->
   <link
     rel="stylesheet"
     href="/cdn/@highlightjs/cdn-assets@11.9.0/styles/nord.min.css"
   />
-  <script
-    crossorigin
-    src="/cdn/@highlightjs/cdn-assets@11.9.0/highlight.min.js"
-  ></script>
 </head>
 <body>
   <div id="root"></div>
+  
+  <!-- Fixed script with type="module" -->
+  <script 
+    crossorigin
+    src="/cdn/@highlightjs/cdn-assets@11.9.0/highlight.min.js"
+    type="module"
+  ></script>
+
+  <!-- Existing script -->
   <script
     type="module"
     src="/src/main.jsx"
